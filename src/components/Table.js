@@ -4,10 +4,12 @@ import TableBody from "./TableBody";
 
 class Table extends React.Component {
   render() {
+    const { characters } = this.props;
+
     return (
       <table>
         <TableHeader />
-        <TableBody />
+        <TableBody characters={characters} />
       </table>
     );
   }
