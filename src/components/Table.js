@@ -2,17 +2,15 @@ import React from "react";
 import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 
-class Table extends React.Component {
-  render() {
-    const { characters } = this.props;
+const Table = (props) => {
+  const { characters, removeCharacter } = props;
 
-    return (
-      <table>
-        <TableHeader />
-        <TableBody characters={characters} />
-      </table>
-    );
-  }
-}
+  return (
+    <table>
+      <TableHeader />
+      <TableBody characters={characters} removeCharacter={removeCharacter} />
+    </table>
+  );
+};
 
 export default Table;

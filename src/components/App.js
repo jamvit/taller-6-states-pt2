@@ -32,6 +32,16 @@ class App extends React.Component {
       }),
     });
   };
+
+  render() {
+    const { characters } = this.state;
+
+    return (
+      <div className="cointainer">
+        <Table characters={characters} removeCharacter={this.removeCharacter} />
+      </div>
+    );
+  }
 }
 
 export default App;
